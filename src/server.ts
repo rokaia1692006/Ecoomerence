@@ -7,7 +7,7 @@ import {
 import express from 'express';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-
+import { join } from 'node:path';
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
 
@@ -20,15 +20,16 @@ const angularApp = new AngularNodeAppEngine();
  *
  * Example:
  * ```ts
- * app.get('/api/**', (req, res) => {
- *   // Handle API request
- * });
+ 
  * ```
  */
 
 /**
  * Serve static files from /browser
  */
+app.get('/api/**', (req, res) => {
+   res.sendFile(join(browserDistFolder, 'index.html'));
+ });
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
