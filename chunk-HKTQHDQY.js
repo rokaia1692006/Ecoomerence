@@ -1,1 +1,0 @@
-import{Ab as a,Wa as t,nb as n,ob as p}from"./chunk-AGOSMD2F.js";var s=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-logout"]],decls:2,vars:0,template:function(e,m){e&1&&(n(0,"p"),a(1,"logout works!"),p())},encapsulation:2})};export{s as LogoutComponent};

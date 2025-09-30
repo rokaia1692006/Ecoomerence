@@ -1,0 +1,1 @@
+import{U as e,k as t}from"./chunk-7YWQNTIB.js";var a=class o{constructor(){}_loading=new t(!1);loading$=this._loading.asObservable();show(){this._loading.next(!0)}hide(){this._loading.next(!1)}static \u0275fac=function(i){return new(i||o)};static \u0275prov=e({token:o,factory:o.\u0275fac,providedIn:"root"})};export{a};
