@@ -7,6 +7,7 @@ import { USER_ROUTES } from './modules/user/user.routes';
 export const routes: Routes = [
 // get layout then get children routes from module routes
 // auth/login -> auth module routes
+ { path: "", redirectTo: "home", pathMatch: "full" },
   {path:"",
     loadChildren:()=>import("./modules/auth/auth.routes").then(m=>m.AUTH_ROUTES)
   },
